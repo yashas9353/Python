@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 def fib(n):
     if n <= 0:
         print("Invalid input")
@@ -31,4 +34,29 @@ def fact_rec(n):
         return n * fact_rec(n - 1)
 
 
-print(fact_rec(4))
+def sum_n(n):
+    if n == 1:
+        return 1
+    else:
+        return n + sum_n(n - 1)
+
+
+# Filter
+
+lst = [1, 2, 3, 4, 5, 6]
+
+res = list(filter(lambda n: n % 2 == 0, lst))
+
+print(res)
+
+# map
+
+res1 = list(map(lambda n: n * n, res))
+
+print(res1)
+
+# reduce (it is not a built-in fuction we neede to import it from functools package)
+
+sum1 = reduce(lambda a, b: a + b, res)
+
+print(sum1)
