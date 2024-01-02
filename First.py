@@ -17,4 +17,18 @@ def fib(n):
                 print(c)
 
 
-fib(2)
+def fact(n):
+    res = 1
+    for i in range(n, 0, -1):
+        res *= i
+    return res
+
+
+def fact_rec(n):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * fact_rec(n - 1)
+
+
+print(fact_rec(4))
