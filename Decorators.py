@@ -3,7 +3,7 @@ def div(a, b):
 
 
 def rev(name):
-    print(name)
+    return name
 
 
 def smart_div(func):
@@ -27,9 +27,7 @@ def deco_rev(func):
     return inner
 
 
-div = smart_div(div)
-
-div(2, 4)
-
 rev = deco_rev(rev)
-rev('yashas')
+
+if __name__ == '__main__':
+    print(rev("varshitha"))
