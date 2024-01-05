@@ -96,14 +96,14 @@ class Student:
 
 
 s1 = Student('Yashas', 10)
-s1.schoolName = "Yashas"
 s2 = Student('Varshitha', 10)
 
-print("School Name : {}".format(Student.school_name()))
-s1.print_student()
+if __name__ == '__main__':
+    print("School Name : {}".format(Student.school_name()))
+    s1.print_student()
 
-print("School Name : {}".format(Student.school_name()))
-s2.print_student()
+    print("School Name : {}".format(Student.school_name()))
+    s2.print_student()
 
-res = Student.fact(5)
-print(res)
+    res = Student.fact(5)
+    print(res)
