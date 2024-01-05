@@ -72,3 +72,38 @@
 #
 # print(c1.mil, c1.com, c1.wheel)
 # print(c2.mil, c2.com, c2.wheel)
+
+class Student:
+    schoolName = "New Balaji"
+
+    def __init__(self, name, clz):
+        self.name = name
+        self.clz = clz
+
+    @classmethod
+    def school_name(cls):
+        return cls.schoolName
+
+    @staticmethod
+    def fact(n):
+        if n == 1:
+            return 1
+        else:
+            return n * Student.fact(n - 1)
+
+    def print_student(self):
+        print("Name : {} and Class: {}".format(self.name, self.clz))
+
+
+s1 = Student('Yashas', 10)
+s1.schoolName = "Yashas"
+s2 = Student('Varshitha', 10)
+
+print("School Name : {}".format(Student.school_name()))
+s1.print_student()
+
+print("School Name : {}".format(Student.school_name()))
+s2.print_student()
+
+res = Student.fact(5)
+print(res)
