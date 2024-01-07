@@ -51,6 +51,12 @@ class B(C, A):
     def feature(self):
         print("From feature B")
 
+    def greet(self):
+        print("Hello")
+
+    def greet(self, name):
+        print("Hello ", name)
+
 
 Bobj = B()
-Bobj.feature()
+Bobj.greet('yashas')
